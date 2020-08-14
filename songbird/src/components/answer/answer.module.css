@@ -1,0 +1,53 @@
+.answerContainer {
+    display: flex;
+    flex-direction: column;
+    width: calc(50% - 0.5em);
+    background-color: #4e4e4e;
+    border-radius: 0.7em;
+    padding: 1em;
+    max-height: 308px;
+    margin-top: 1rem;
+}
+
+.answerImg {
+    width: calc(160px + 1em);
+    height: 135px;
+    overflow: hidden;
+    border: none;
+    border-radius: 0.4em;
+    object-fit: cover;
+    margin-right: 1em;
+}
+
+.imgAndTitleContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.8em;
+}
+
+.answerInfo {
+    width: 100%;
+    max-width: calc(100% - 160px - 2em);
+    height: 135px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.trackTitle {
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin-bottom: 0.2em;
+    /* margin-left: 0.4em; */
+}
+
+.trackArtist {
+    font-size: 0.8rem;
+    margin-bottom: 1em;
+    /* margin-left: 1em; */
+}
+
+.discription {
+    line-height: 1.3;
+}

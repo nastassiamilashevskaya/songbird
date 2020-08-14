@@ -11,20 +11,37 @@
 }
 
 .questionImg {
-    width: 200px;
+    width: calc(200px + 1em);
     height: 155px;
     overflow: hidden;
     border: none;
     border-radius: 0.4em;
     object-fit: cover;
+    margin-right: 1em;
 }
 
 .questionData {
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    max-width: calc(100% - 200px - 2em);
+    height: 155px;
 }
 
 .questionArtist {
     font-size: 1.5rem;
     font-weight: 500;
+}
+
+.trackTitle {
+    font-size: 2rem;
+    font-weight: 500;
+    margin-bottom: 0.2em;
+    margin-left: 0.4em;
+}
+
+.trackArtist {
+    margin-bottom: 1em;
+    margin-left: 1em;
 }
