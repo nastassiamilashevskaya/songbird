@@ -36,16 +36,13 @@
     width: 100%;
 }
 
-.sb-soundplayer-btn {
-    color: #1c7830;
-}
-
 .sb-soundplayer-progress-inner {
-    background-color: #1c7830;
+    background-color: #25957e;
+    border-radius: 0.3em;
 }
 
 .sb-soundplayer-volume-range::-ms-thumb, .sb-soundplayer-volume-range::-ms-fill-lower {
-    background: #1c7830;
+    background: #25957e;
 }
 
 .trackTitle {
@@ -61,5 +58,5 @@
 }
 
 .small-padding {
-    padding: 0.3rem;
+    padding: 0.5rem;
 }

@@ -20,9 +20,20 @@ const streamUrl = `https://raw.githubusercontent.com/nastassiamilashevskaya/song
 
 
 const AWSSoundPlayer = withCustomAudio(props => {
-    useEffect(() => {
-        console.log('props', props)
-    }, [])
+  let { correct, playingAudio, setPlayingAudio } = props
+  useEffect(() => {
+    const player = document.querySelector('#question-audio-container').childNodes[0].childNodes[0].childNodes[0]
+    document.querySelector('#options-container').childNodes.forEach(el => {
+      el.addEventListener('click', () => {
+        setPlayingAudio(props.playing)
+        console.log('playingAudio', playingAudio)
+        // if (props.playing && !correct) {
+        //   console.log(correct)
+        //   player.click()
+        // }  
+      })
+    })
+  })
 
   return (
     // <div>
@@ -38,7 +49,7 @@ const AWSSoundPlayer = withCustomAudio(props => {
         {/* <div className="trackTitle">{data[2].songs[2].song}</div>
         <div className="trackArtist">{data[2].songs[2].artist}</div> */}
         <div className="flex-auto player-container">
-          <PlayButton className="flex-none h4 mr2 button white btn-big button-outline button-grow bg-orange circle" {...props} />
+          <PlayButton className="flex-none h4 mr2 button white btn-big button-outline button-grow bg-orange circle custom-btn" {...props} />
           <div className='flex flex-center volume-and-progress'>
             <VolumeControl
               className='mr2 flex flex-center'
@@ -74,7 +85,11 @@ class SoundPlayer extends React.Component {
     return (
       <AWSSoundPlayer
         streamUrl={streamUrl + this.props.url}
-        preloadType="metadata" />
+        preloadType="metadata" 
+        correct={this.props.correct}
+        playingAudio={this.props.playingAudio}
+        setPlayingAudio={this.props.setPlayingAudio}
+        />
     );
   }
 }

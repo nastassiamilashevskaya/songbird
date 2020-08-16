@@ -6,7 +6,7 @@
 }
 
 .topicTitle {
-    background-color: #1C7830;
+    background-color: #25957e;
     width: calc(100% / 6);
     padding: 0.7em 0;
     border: none;
@@ -26,5 +26,5 @@
 }
 
 .active {
-    background-color: #3d9b51;
+    background-color: #4cb49e;
 }

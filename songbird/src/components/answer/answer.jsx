@@ -24,14 +24,9 @@ export default ({ answer }) => {
                 </div>
                 <div className={styles.discription}>
                     {/* 431 */}
-                    sssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss
-                    sssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss
-                    sssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss
-                    sssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss
-                    sssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss
-                    sssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss
+                    {temp[0]['discription']}
                 </div></> :
-                <div>yyyyyyyyyyyyyyyyyyy</div>
+                <div>Listen to the audio and choose the song from list</div>
             }
         </div>
     )

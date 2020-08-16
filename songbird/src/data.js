@@ -64,7 +64,7 @@ const data = [
                 imageLocation: 'jazz/ray charles.jpg',
                 discription: `Ray Charles Robinsonwas an American singer, songwriter, pianist, and composer. 
                 Among friends and fellow musicians he preferred being called "Brother Ray." He was often 
-                referred to as "The Genius."Charles was blinded during childhood due to glaucoma.Charles 
+                referred to as "The Genius. "Charles was blinded during childhood due to glaucoma. Charles 
                 pioneered the soul music genre during the 1950s by combining blues, jazz, rhythm and blues, 
                 and gospel styles into the music he recorded for Atlantic. Charles is a 17-time Grammy Award winner.`
             }

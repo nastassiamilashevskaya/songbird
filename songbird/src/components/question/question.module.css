@@ -44,4 +44,16 @@
 .trackArtist {
     margin-bottom: 1em;
     margin-left: 1em;
+    position: relative;
+}
+
+.trackArtist::after {
+    content: '';
+    position: absolute;
+    width: 95%;
+    left: 0;
+    top: 2em;
+    border-radius: 1em;
+    padding: 0.5px;
+    background-color: #6b6b6b;
 }
