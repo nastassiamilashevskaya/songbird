@@ -6,6 +6,7 @@ import Topics from './components/topics/topics'
 import Question from './components/question/question'
 import Options from './components/options/options'
 import Answer from './components/answer/answer'
+import Congrats from './components/congrats/congrats'
 import data from './data'
 import CorrectAudio from './audio/correct-audio.mp3'
 import ErrorAudio from './audio/error-audio.mp3'
@@ -24,6 +25,8 @@ function App() {
   const [mistakes, setMistakes] = useState(0)
   const [score, setScore] = useState(0)
   const [playingAudio, setPlayingAudio] = useState(false)
+  const [showCongrats, setShowCongrats] = useState(false)
+  const [showGreatCongrats, setShowGreatCongrats] = useState(false)
   const topicsArray = data.map(el => el.topic)
 
   const handleNextButtonClick = () => {
@@ -34,6 +37,15 @@ function App() {
       setCurrentOption([])
       console.log(playingAudio)
     }
+  }
+
+  const handlePlayAgainButton = () => {
+    setTopicIndex(0)
+    setQuestionIndex(randomNumber(0, 5))
+    setCorrect(false)
+    setCurrentOption([])
+    setScore(0)
+    setShowCongrats(false)
   }
 
   const handleClickError = () => {
@@ -57,31 +69,37 @@ function App() {
       />
       <Header score={score} />
       <Topics topics={topicsArray} currentTopic={topicsArray[topicIndex]} />
-      <Question
+      {!showCongrats ? <><Question
         correct={correct}
         question={data[topicIndex].songs[questionIndex]}
         playingAudio={playingAudio}
         setPlayingAudio={(a) => setPlayingAudio(a)}
       />
-      <div className={styles.optionsAndAnswerContainer}>
-        <Options
-          options={data[topicIndex].songs}
-          setCurrentOption={(option) => setCurrentOption(option)} topicIndex={topicIndex}
-          correctSong={data[topicIndex].songs[questionIndex]}
-          correct={correct}
-          setCorrect={(c) => setCorrect(c)}
-          mistakes={mistakes}
-          setMistakes={(num) => setMistakes(num)}
-          score={score}
-          setScore={(s) => setScore(s)}
-          playingAudio={playingAudio}
-          handleClickError={() => handleClickError()}
-        />
-        <Answer answer={currentOption} />
-      </div>
-      {correct ?
-        <button onClick={() => handleNextButtonClick()} className={styles.nextButton} type='button'>Next level</button> :
-        <button onClick={() => console.log('playError', playError)} className={styles.inactiveButton} type='button'>Next level</button>}
+        <div className={styles.optionsAndAnswerContainer}>
+          <Options
+            options={data[topicIndex].songs}
+            setCurrentOption={(option) => setCurrentOption(option)} topicIndex={topicIndex}
+            correctSong={data[topicIndex].songs[questionIndex]}
+            correct={correct}
+            setCorrect={(c) => setCorrect(c)}
+            mistakes={mistakes}
+            setMistakes={(num) => setMistakes(num)}
+            score={score}
+            setScore={(s) => setScore(s)}
+            playingAudio={playingAudio}
+            handleClickError={() => handleClickError()}
+            setShowCongrats={(s) => setShowCongrats(s)}
+          />
+          <Answer answer={currentOption} />
+        </div>
+        {correct ?
+          <button onClick={() => handleNextButtonClick()} className={styles.nextButton} type='button'>Next level</button> :
+          <button onClick={() => console.log('playError', playError)} className={styles.inactiveButton} type='button'>Next level</button>}
+      </> :
+        <Congrats 
+        score={score} 
+        handlePlayAgainButton={() => handlePlayAgainButton()}
+        />}
     </div>
   );
 }

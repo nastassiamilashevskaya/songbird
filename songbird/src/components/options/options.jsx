@@ -6,7 +6,8 @@ import ReactAudioPlayer from 'react-audio-player';
 import {ReactDOM} from 'react'
 
 export default ({ options, setCurrentOption, topicIndex, correctSong, correct, 
-    setCorrect, mistakes, setMistakes, score, setScore, playingAudio, handleClickError }) => {
+    setCorrect, mistakes, setMistakes, score, setScore, playingAudio, handleClickError,
+    setShowCongrats }) => {
     const handlleClick = (event) => {
         const currentOption = event.target.classList.contains(`${styles.option}`) ? event.target.innerText : ''
         const optionObject = data[topicIndex].songs.filter(el => el.song === currentOption)
@@ -23,7 +24,8 @@ export default ({ options, setCurrentOption, topicIndex, correctSong, correct,
                 if (mistakes < 5) {
                     setScore(score + 5 - mistakes)
                 }
-                setMistakes(0)            
+                setMistakes(0)      
+                if (topicIndex === 5) setShowCongrats(true)      
             } else {
                 handleClickError()
                 setMistakes(mistakes + 1)
