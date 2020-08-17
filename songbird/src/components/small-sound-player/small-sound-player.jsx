@@ -1,5 +1,4 @@
-import React, { Component, useEffect } from 'react';
-import data from '../../data'
+import React from 'react';
 import '../../../node_modules/react-soundplayer/styles/buttons.css'
 import '../../../node_modules/react-soundplayer/styles/cover.css'
 import '../../../node_modules/react-soundplayer/styles/icons.css'
@@ -9,16 +8,10 @@ import './small-sound-player.css'
 
 import { PlayButton, Timer, VolumeControl, Progress } from 'react-soundplayer/components';
 import { withCustomAudio } from 'react-soundplayer/addons';
-import { useState } from 'react';
 
 const streamUrl = `https://raw.githubusercontent.com/nastassiamilashevskaya/songbird-data/master/`;
-const trackTitle = 'Great song by random artist';
 
 const AWSSoundPlayer = withCustomAudio(props => {
-    useEffect(() => {
-        console.log(props.volume)
-    }, [])
-
   return (
     <div className="p2 border navy mt1 mb3 flex rounded flex-column">
         <div className="flex-auto player-container">

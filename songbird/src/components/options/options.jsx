@@ -9,7 +9,6 @@ export default ({ options, setCurrentOption, topicIndex, correctSong, correct,
         const currentOption = event.target.classList.contains(`${styles.option}`) ? event.target.innerText : ''
         const optionObject = data[topicIndex].songs.filter(el => el.song === currentOption)
         setCurrentOption(optionObject)
-        console.log('correct', correct)
         if (!correct) {
             if (currentOption === correctSong.song) {
                 const player = document.querySelector('#question-audio-container').childNodes[0].childNodes[0].childNodes[0]

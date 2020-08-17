@@ -195,7 +195,7 @@ const data = [
             },
             {
                 song: 'More Than You Know',
-                artist: `Axwell /\ Ingrosso`,
+                artist: `Axwell & Ingrosso`,
                 audioLocation: 'pop/axwell ingrosso - more than you know.mp3',
                 imageLocation: 'pop/axwell ingrosso.jpg',
                 discription: `Axwell Λ Ingrosso is a Swedish DJ duo consisting of Swedish House Mafia members Axwell 

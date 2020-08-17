@@ -2,11 +2,14 @@ import React from 'react'
 import styles from './question.module.css'
 import DefaultMusic from '../../img/default-music.jpg'
 import SoundPlayer from '../sound-player/sound-player'
-import data from '../../data'
+import { useEffect } from 'react'
 
 const URL = 'https://raw.githubusercontent.com/nastassiamilashevskaya/songbird-data/master/'
 
 export default ({ correct, question, playingAudio, setPlayingAudio }) => {
+    useEffect(() => {
+        console.log('correct answer', question.song)
+    })
     return (
         <div className={styles.questionContainer}>
             <img className={styles.questionImg} src={correct ? URL + question.imageLocation : DefaultMusic} alt='' />

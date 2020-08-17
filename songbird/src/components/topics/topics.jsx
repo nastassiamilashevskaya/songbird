@@ -1,6 +1,5 @@
 import React from 'react'
 import styles from './topics.module.css'
-import data from '../../data'
 
 export default ({ topics, currentTopic }) => {
     return (

@@ -1,9 +1,6 @@
-import React, { useState } from 'react'
+import React from 'react'
 import styles from './answer.module.css'
-import DefaultMusic from '../../img/default-music.jpg'
 import SmallSoundPlayer from '../small-sound-player/small-sound-player'
-import data from '../../data'
-import { useEffect } from 'react'
 
 const URL = 'https://raw.githubusercontent.com/nastassiamilashevskaya/songbird-data/master/'
 
@@ -23,7 +20,6 @@ export default ({ answer }) => {
                     </div>
                 </div>
                 <div className={styles.discription}>
-                    {/* 431 */}
                     {temp[0]['discription']}
                 </div></> :
                 <div>Listen to the audio and choose the song from list</div>

@@ -1,6 +1,5 @@
 import React from 'react'
 import styles from './congrats.module.css'
-import YouTube from 'react-youtube';
 import Modal from '../modal/modal'
 import { useState } from 'react';
 

@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect } from 'react';
 import ReactAudioPlayer from 'react-audio-player';
 import styles from './App.module.css';
 import Header from './components/header/header'
@@ -34,7 +34,6 @@ function App() {
       setQuestionIndex(randomNumber(0, 5))
       setCorrect(false)
       setCurrentOption([])
-      console.log(playingAudio)
     }
   }
 
@@ -93,7 +92,7 @@ function App() {
         </div>
         {correct ?
           <button onClick={() => handleNextButtonClick()} className={styles.nextButton} type='button'>Next level</button> :
-          <button onClick={() => console.log('playError', playError)} className={styles.inactiveButton} type='button'>Next level</button>}
+          <button className={styles.inactiveButton} type='button'>Next level</button>}
       </> :
         <Congrats 
         score={score} 

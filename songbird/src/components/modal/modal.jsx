@@ -4,13 +4,11 @@ import YouTube from 'react-youtube';
 
 export default ({ setOpenModal }) => {
     const opts = {
-        // height: '448vh',
-        // width: '100%',
         playerVars: {
             autoplay: 1,
         },
     };
-
+    /* eslint-disable */
     useEffect(() => {
         document.addEventListener('click', (e) => {
             if (e.target.classList.contains(`${styles.overlay}`)) {
@@ -18,7 +16,7 @@ export default ({ setOpenModal }) => {
             }
         })
     }, [])
-
+    /* eslint-enable */
     return (
         <div id='overlay' className={styles.overlay}>
             <div className={styles.content}>

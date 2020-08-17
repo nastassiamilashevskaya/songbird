@@ -12,22 +12,11 @@
 
 .content {
     position: absolute;
-    /* top: 40px;
-    left: 40px;
-    right: 40px;
-    bottom: 40px; */
-    /* border: 1px solid #ccc; */
     background-color: #25957e;
-    /* width: 50%;
-    height: 60%; */
     overflow: auto;
     -webkit-overflow-scrolling: touch;
     border-radius: 4px;
     outline: none;
-    /* padding: 2em; */
-}
-
-.videoContainer {
 }
 
 @media (max-width: 767px) {
@@ -36,13 +25,6 @@
         height: 18rem;
     }
 }
-
-/* @media (max-width: 459px) {
-    .content, .videoContainer {
-        width: 31rem;
-        height: 18rem;
-    }
-} */
 
 @media (max-width: 415px) {
     .content, .videoContainer {
