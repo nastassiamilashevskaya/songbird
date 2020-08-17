@@ -1,6 +1,6 @@
 .congratsContainer {
     margin-top: 1em;
-    padding: 1em;
+    padding: 2em;
     background-color: #4e4e4e;
     display: flex;
     flex-direction: column;
@@ -24,6 +24,10 @@
     margin-bottom: 0.5em;
 }
 
+.congratsText > span {
+    font-weight: 500;
+}
+
 .playAgainBtn {
     width: 70%;
     color: white;
@@ -37,7 +41,20 @@
     font-family: 'Montserrat', sans-serif;
 }
 
-.playAgainBtn:hover {
+.playAgainBtn:hover, .getGiftBtn:hover {
     cursor: pointer;
     background-color: #4cb49e;
+}
+
+.getGiftBtn {
+    color: white;
+    background-color: #25957e;
+    font-size: 1.3rem;
+    margin-top: 0.7em;
+    border: none;
+    border-radius: 0.7em;
+    padding: 0.5em 0.7em;
+    transition: background-color .2s linear;
+    font-family: 'Montserrat', sans-serif;
+    text-decoration: none;
 }

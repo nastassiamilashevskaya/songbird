@@ -23,9 +23,9 @@ function App() {
   const [questionIndex, setQuestionIndex] = useState(0)
   const [currentOption, setCurrentOption] = useState([])
   const [mistakes, setMistakes] = useState(0)
-  const [score, setScore] = useState(0)
+  const [score, setScore] = useState(30)
   const [playingAudio, setPlayingAudio] = useState(false)
-  const [showCongrats, setShowCongrats] = useState(false)
+  const [showCongrats, setShowCongrats] = useState(true)
   const [showGreatCongrats, setShowGreatCongrats] = useState(false)
   const topicsArray = data.map(el => el.topic)
 

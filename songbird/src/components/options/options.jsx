@@ -1,9 +1,6 @@
 import React from 'react'
 import styles from './options.module.css'
 import data from '../../data'
-import ErrorAudio from '../../audio/error-audio.mp3'
-import ReactAudioPlayer from 'react-audio-player';
-import {ReactDOM} from 'react'
 
 export default ({ options, setCurrentOption, topicIndex, correctSong, correct, 
     setCorrect, mistakes, setMistakes, score, setScore, playingAudio, handleClickError,
