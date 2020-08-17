@@ -4,8 +4,8 @@ import YouTube from 'react-youtube';
 
 export default ({ setOpenModal }) => {
     const opts = {
-        height: '448vh',
-        width: '100%',
+        // height: '448vh',
+        // width: '100%',
         playerVars: {
             autoplay: 1,
         },
@@ -25,6 +25,7 @@ export default ({ setOpenModal }) => {
                 <YouTube
                     videoId="dQw4w9WgXcQ"
                     opts={opts}
+                    className={styles.videoContainer}
                 />
             </div>
         </div>

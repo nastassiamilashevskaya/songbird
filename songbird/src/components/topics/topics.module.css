@@ -28,3 +28,21 @@
 .active {
     background-color: #4cb49e;
 }
+
+@media (max-width: 767px) {
+    .topicsContainer {
+        flex-wrap: wrap;
+    }
+    .topicTitle {
+        width: calc(100% / 3);
+    }
+    .topicTitle:last-child {
+        border-bottom-right-radius: 0.4em;
+        border-top-right-radius: 0;
+    }
+    .topicTitle:first-child {
+        border-top-left-radius: 0.4em;
+        border-bottom-left-radius: 0;
+    }
+}
+

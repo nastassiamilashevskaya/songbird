@@ -4,6 +4,12 @@ body {
   background-color: #333333;
   color: white;
 }
+@media (max-width: 575px) {
+  * {
+    font-size: 13px;
+  }
+}
+
 
 .container {
   font-family: 'Montserrat', sans-serif;
@@ -63,6 +69,12 @@ body {
 .optionsAndAnswerContainer {
   display: flex;
   justify-content: space-between;
+}
+
+@media (max-width: 768px) {
+  .optionsAndAnswerContainer {
+    flex-direction: column;
+  }  
 }
 
 .nextButton {

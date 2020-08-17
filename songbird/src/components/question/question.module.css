@@ -57,3 +57,17 @@
     padding: 0.5px;
     background-color: #6b6b6b;
 }
+
+@media (max-width: 575px) {
+    .questionContainer {
+        flex-direction: column;
+    }
+    .questionImg {
+        margin-right: 0;
+    }
+    .questionData {
+        max-width: 100%;
+        margin-top: 1rem;
+        height: 140px;
+    }
+}
