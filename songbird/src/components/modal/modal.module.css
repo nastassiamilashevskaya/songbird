@@ -1,0 +1,44 @@
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(58, 58, 58, 0.75);
+}
+
+.content {
+    position: absolute;
+    background-color: #25957e;
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
+    border-radius: 4px;
+    outline: none;
+}
+
+@media (max-width: 767px) {
+    .content, .videoContainer {
+        width: 31rem;
+        height: 18rem;
+    }
+}
+
+@media (max-width: 415px) {
+    .content, .videoContainer {
+        width: 26rem;
+        height: 15rem;
+    }
+}
+
+@media (max-width: 343px) {
+    .content, .videoContainer {
+        width: 23rem;
+        height: 13.5rem;
+    }
+}
+
+
+

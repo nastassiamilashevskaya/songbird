@@ -1,0 +1,73 @@
+.sb-soundplayer-volume {
+    display: flex;
+    align-items: center;
+}
+
+.sb-soundplayer-volume div {
+    margin-right: 0.3em;
+}
+
+.flex {
+    display: flex;
+}
+
+.flex-center {
+    align-items: center;
+}
+
+.sb-soundplayer-timer {
+    font-size: 0.6em;
+    width: 8em;
+    margin-left: 1em;
+}
+
+.flex-column {
+    flex-direction: column;
+}
+
+.player-container {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.volume-and-progress {
+    width: 100%;
+}
+
+.sb-soundplayer-btn {
+    color: #25957e;
+}
+
+.sb-soundplayer-play-btn {
+    color: white;
+    border: none;
+    border-radius: 50%;
+    padding: 0.8em;
+    background-color: #25957e;
+}
+
+.sb-soundplayer-progress-inner {
+    background-color: #25957e;
+}
+
+.sb-soundplayer-volume-range::-ms-thumb, .sb-soundplayer-volume-range::-ms-fill-lower {
+    background: #25957e;
+}
+
+.trackTitle {
+    font-size: 2rem;
+    font-weight: 500;
+    margin-bottom: 0.2em;
+    margin-left: 0.4em;
+}
+
+.trackArtist {
+    margin-bottom: 1em;
+    margin-left: 1em;
+}
+
+.sb-soundplayer-progress-container {
+    border-radius: 0.3em;
+}
